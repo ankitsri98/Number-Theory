@@ -25,5 +25,5 @@ int main(){
         
         cout<<__gcd(n,p)<<endl;
     }
-	return 0;
+	return 0 ;
 }
