@@ -14,12 +14,12 @@ vector<vector<ll > > multiply(vector<vector<ll > > A,vector<vector<ll > > B){
             }
         }
     }
-    for(int i=1;i<=k;i++){
+    /*for(int i=1;i<=k;i++){
         for(int j=1;j<=k;j++){
             cout<<C[i][j]<<" ";
         }
         cout<<endl;
-    }
+    }*/
     return C;
 }
 vector<vector<ll > > pow(vector<vector<ll > > T,ll n){//matrix exponentiation
