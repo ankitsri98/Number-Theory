@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define pb push_back
-#define ll long long int
-
-ll sumphi[1000002]={0};
-void eulerSeive(ll n)
+#define ll long long 
+#define n 1000002
+ll sumphi[n]={0};
+void eulerSeive()
 {
     ll a[n+2];
     for(ll i=0;i<=n+1;i++)
@@ -21,15 +21,10 @@ void eulerSeive(ll n)
                 a[j]=(a[j]*(i-1))/i;
             }
         }
-        else
-        {
-            continue;
-        }
     }
     /*for(ll i=1;i<=n;i++)
     cout<<"EULER TOTIENT PHI VALUE FOR "<<i<<" IS "<<a[i]<<endl;
     cout<<endl;*/
-
     for(ll i=1;i<=n;i++)
     {
         for(ll j=i;j<=n;j+=i)
@@ -39,9 +34,18 @@ void eulerSeive(ll n)
     }
 }
 
-void func(long long n)
+void func(long long m)
 {
-    eulerSeive(1000000);
-	ll x=((sumphi[n]+1)*n)/2;
+	ll x=((sumphi[m]+1)*m)/2;
     cout<<x<<endl;
+}
+int main()
+{
+    ll x,t;
+    eulerSeive();
+    cin>>t;
+    while(t--){
+    cin>>x;
+    func(x);
+    }
 }
